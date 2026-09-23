@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Paiement sécurisé | VG BOIS</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🔥</span>
+            <span>VG <strong>BOIS</strong></span>
+        </a>
+
+        <div class="secure-header">
+            🔒 Paiement sécurisé
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="page-hero small-page-hero">
+
+    <div class="container">
+
+        <span class="section-label light-label">
+            Étape 2 sur 2
+        </span>
+
+        <h1>Paiement</h1>
+
+        <p>
+            Finalisez votre commande par carte bancaire.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="payment-layout">
+
+            <div class="payment-card">
+
+                <div class="payment-icon">
+                    💳
+                </div>
+
+                <h2>
+                    Paiement par carte bancaire
+                </h2>
+
+                <p>
+                    Vous allez être redirigé vers la page de paiement
+                    sécurisée de notre prestataire de paiement.
+                </p>
+
+                <div class="payment-methods">
+                    <span>VISA</span>
+                    <span>Mastercard</span>
+                    <span>CB</span>
+                </div>
+
+                <button
+                    id="payButton"
+                    class="btn btn-primary full-btn">
+
+                    Payer ma commande
+
+                </button>
+
+                <p class="payment-security">
+                    🔒 Les données de carte bancaire ne doivent pas
+                    être enregistrées directement par VG BOIS.
+                </p>
+
+                <div id="paymentMessage"></div>
+
+            </div>
+
+
+            <aside class="order-summary-box">
+
+                <h2>Récapitulatif</h2>
+
+                <div id="paymentItems"></div>
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="paymentTotal">
+                        0 €
+                    </strong>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-bottom-simple">
+
+        <p>
+            © 2026 VG BOIS.
+        </p>
+
+        <a href="cgv.html">
+            Conditions de vente
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+
+<script>
+
+function loadPaymentSummary() {
+
+    const cart =
+        JSON.parse(
+            localStorage.getItem("vgBoisCart") || "[]"
+        );
+
+    const container =
+        document.getElementById("paymentItems");
+
+    const total =
+        document.getElementById("paymentTotal");
+
+    if (!cart.length) {
+
+        container.innerHTML =
+            "<p>Votre panier est vide.</p>";
+
+        total.textContent = "0 €";
+
+        return;
+
+    }
+
+    let totalPrice = 0;
+
+    container.innerHTML =
+        cart.map(item => {
+
+            const line =
+                item.price * item.quantity;
+
+            totalPrice += line;
+
+            return `
+                <div class="summary-row">
+                    <span>
+                        ${item.name} × ${item.quantity}
+                    </span>
+                    <strong>
+                        ${line.toFixed(2)} €
+                    </strong>
+                </div>
+            `;
+
+        }).join("");
+
+    total.textContent =
+        totalPrice.toFixed(2) + " €";
+}
+
+
+document
+    .getElementById("payButton")
+    .addEventListener("click", async function () {
+
+        const message =
+            document.getElementById("paymentMessage");
+
+        /*
+         * IMPORTANT :
+         * Cette URL doit être remplacée par votre
+         * backend de paiement.
+         *
+         * Exemple :
+         *
+         * POST /api/create-checkout-session
+         *
+         * Le serveur crée ensuite une session
+         * chez votre prestataire de paiement.
+         */
+
+        message.innerHTML = `
+            <div class="notice">
+                Le système de paiement doit être connecté
+                au serveur VG BOIS avant la mise en production.
+            </div>
+        `;
+
+    });
+
+
+loadPaymentSummary();
+
+</script>
+
+</body>
+</html>

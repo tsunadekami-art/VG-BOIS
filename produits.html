@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Produit | VG BOIS</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">🔥</span>
+
+            <span>
+                VG <strong>BOIS</strong>
+            </span>
+
+        </a>
+
+
+        <nav class="nav" id="mainNav">
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="boutique.html" class="active">
+                Notre bois
+            </a>
+
+            <a href="livraison.html">
+                Livraison
+            </a>
+
+            <a href="a-propos.html">
+                À propos
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a href="panier.html"
+               class="cart-button">
+
+                🛒
+
+                <span>Panier</span>
+
+                <b id="cartCount">0</b>
+
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+<section class="product-detail section">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="boutique.html">
+                Notre bois
+            </a>
+
+            <span>›</span>
+
+            <span id="breadcrumbProduct">
+                Produit
+            </span>
+
+        </div>
+
+
+        <div class="product-detail-grid">
+
+
+            <div class="product-gallery">
+
+                <div class="main-product-image">
+
+                    <img
+                        id="productImage"
+                        src="https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&w=1200&q=80"
+                        alt="Bois de chauffage">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="product-info">
+
+                <span class="product-type"
+                      id="productType">
+                    Bûches
+                </span>
+
+
+                <h1 id="productName">
+                    Bois de chauffage
+                </h1>
+
+
+                <div class="product-price">
+
+                    <strong id="productPrice">
+                        95 €
+                    </strong>
+
+                    <span>
+                        / unité
+                    </span>
+
+                </div>
+
+
+                <div class="product-description">
+
+                    <p>
+                        Bois de chauffage sélectionné pour répondre
+                        aux besoins de votre chauffage domestique.
+                    </p>
+
+                    <p>
+                        Choisissez la quantité souhaitée avant
+                        d'ajouter le produit à votre panier.
+                    </p>
+
+                </div>
+
+
+                <div class="product-specs">
+
+                    <div>
+                        <span>Format</span>
+                        <strong id="productFormat">
+                            25 cm
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Conditionnement</span>
+                        <strong>
+                            Stère
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Livraison</span>
+                        <strong>
+                            Strasbourg & alentours
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="quantity-box">
+
+                    <label>
+                        Quantité
+                    </label>
+
+                    <div class="quantity-control">
+
+                        <button id="minus">
+                            −
+                        </button>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="1"
+                            min="1"
+                            max="50">
+
+                        <button id="plus">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="detailTotal">
+                        95 €
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn btn-primary full-btn"
+                    id="addProduct">
+
+                    Ajouter au panier
+
+                </button>
+
+
+                <div class="product-reassurance">
+
+                    <div>
+                        ✓ Commande en ligne
+                    </div>
+
+                    <div>
+                        ✓ Paiement par carte bancaire
+                    </div>
+
+                    <div>
+                        ✓ Livraison locale
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="product-info-section section">
+
+    <div class="container narrow-container">
+
+        <h2>
+            À propos de ce bois
+        </h2>
+
+        <p>
+            VG BOIS propose du bois de chauffage destiné aux
+            particuliers de Strasbourg et des communes environnantes.
+            Les produits sont proposés dans différents formats afin
+            de répondre aux besoins des appareils de chauffage
+            domestiques.
+        </p>
+
+        <h3>
+            Livraison
+        </h3>
+
+        <p>
+            Après validation de votre commande, les informations
+            nécessaires à la livraison sont utilisées afin de
+            préparer et acheminer votre commande à l'adresse indiquée.
+        </p>
+
+        <h3>
+            Besoin d'une quantité importante ?
+        </h3>
+
+        <p>
+            Pour une commande importante ou une demande particulière,
+            contactez VG BOIS avant de passer commande afin de
+            vérifier les possibilités de livraison.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html"
+               class="logo footer-logo">
+
+                <span class="logo-icon">🔥</span>
+
+                <span>
+                    VG <strong>BOIS</strong>
+                </span>
+
+            </a>
+
+            <p>
+                Bois de chauffage à Strasbourg.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Navigation
+            </h4>
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="boutique.html">
+                Notre bois
+            </a>
+
+            <a href="livraison.html">
+                Livraison
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 VG BOIS. Tous droits réservés.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/app.js"></script>
+
+<script src="js/commande.js"></script>
+
+</body>
+
+</html>

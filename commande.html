@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Informations de livraison | VG BOIS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🔥</span>
+            <span>VG <strong>BOIS</strong></span>
+        </a>
+
+        <nav class="nav" id="mainNav">
+            <a href="index.html">Accueil</a>
+            <a href="boutique.html">Notre bois</a>
+            <a href="livraison.html">Livraison</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="panier.html" class="cart-button">
+                🛒 <span>Panier</span>
+                <b id="cartCount">0</b>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+<section class="page-hero small-page-hero">
+    <div class="container">
+
+        <span class="section-label light-label">
+            Étape 1 sur 2
+        </span>
+
+        <h1>Vos informations</h1>
+
+        <p>
+            Indiquez-nous où nous devons livrer votre commande.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="checkout-section section">
+
+    <div class="container">
+
+        <div class="checkout-layout">
+
+            <form id="orderForm" class="checkout-form">
+
+                <div class="form-card">
+
+                    <h2>Coordonnées</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="firstName">
+                                Prénom *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                required
+                                autocomplete="given-name"
+                                placeholder="Votre prénom">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="lastName">
+                                Nom *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                required
+                                autocomplete="family-name"
+                                placeholder="Votre nom">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">
+                                Adresse e-mail *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                autocomplete="email"
+                                placeholder="exemple@email.com">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="phone">
+                                Téléphone *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                autocomplete="tel"
+                                placeholder="06 00 00 00 00">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <h2>Adresse de livraison</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group full">
+
+                            <label for="address">
+                                Adresse *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="address"
+                                name="address"
+                                required
+                                autocomplete="street-address"
+                                placeholder="Numéro et nom de rue">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="postalCode">
+                                Code postal *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="postalCode"
+                                name="postalCode"
+                                required
+                                inputmode="numeric"
+                                autocomplete="postal-code"
+                                placeholder="67000">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="city">
+                                Ville *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                required
+                                autocomplete="address-level2"
+                                placeholder="Strasbourg">
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="deliveryNotes">
+                                Instructions pour le livreur
+                            </label>
+
+                            <textarea
+                                id="deliveryNotes"
+                                name="deliveryNotes"
+                                rows="4"
+                                placeholder="Code d'accès, emplacement souhaité, informations utiles..."></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <h2>Livraison</h2>
+
+                    <div class="delivery-choice">
+
+                        <label class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="deliveryType"
+                                value="standard"
+                                checked>
+
+                            <span>
+                                <strong>Livraison locale</strong>
+                                <small>
+                                    Le créneau disponible sera confirmé
+                                    selon votre adresse.
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="deliveryType"
+                                value="express">
+
+                            <span>
+                                <strong>Livraison express</strong>
+                                <small>
+                                    Disponible uniquement dans les zones
+                                    et créneaux éligibles.
+                                </small>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <label class="checkbox-line">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required>
+
+                        <span>
+                            J'ai lu et j'accepte les
+                            <a href="cgv.html">
+                                conditions générales de vente
+                            </a>
+                            et la
+                            <a href="confidentialite.html">
+                                politique de confidentialité
+                            </a>.
+                        </span>
+
+                    </label>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary full-btn">
+
+                        Continuer vers le paiement →
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <aside class="order-summary-box">
+
+                <h2>Votre commande</h2>
+
+                <div id="checkoutItems"></div>
+
+                <div class="summary-total">
+
+                    <span>Total produits</span>
+
+                    <strong id="checkoutTotal">
+                        0 €
+                    </strong>
+
+                </div>
+
+                <p class="small-note">
+                    Les éventuels frais de livraison seront indiqués
+                    avant la validation définitive de la commande.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-bottom-simple">
+        <p>© 2026 VG BOIS. Tous droits réservés.</p>
+        <a href="boutique.html">Retour à la boutique</a>
+    </div>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+<script src="js/commande.js"></script>
+
+</body>
+</html>

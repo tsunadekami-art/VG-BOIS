@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Commande confirmée | VG BOIS</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">🔥</span>
+
+            <span>
+                VG <strong>BOIS</strong>
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="confirmation-section">
+
+    <div class="confirmation-card">
+
+        <div class="confirmation-icon">
+            ✓
+        </div>
+
+        <span class="section-label">
+            Merci pour votre commande
+        </span>
+
+        <h1>
+            Commande confirmée
+        </h1>
+
+        <p>
+            Votre commande VG BOIS a bien été enregistrée.
+        </p>
+
+        <div class="confirmation-number">
+
+            <span>
+                Numéro de commande
+            </span>
+
+            <strong id="orderNumber">
+                VG-000000
+            </strong>
+
+        </div>
+
+        <p class="small-note">
+            Un e-mail de confirmation sera envoyé à l'adresse
+            indiquée lors de la commande lorsque le système
+            de messagerie sera connecté.
+        </p>
+
+        <div class="confirmation-actions">
+
+            <a href="index.html"
+               class="btn btn-primary">
+
+                Retour à l'accueil
+
+            </a>
+
+            <a href="boutique.html"
+               class="btn btn-outline">
+
+                Continuer mes achats
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-bottom-simple">
+
+        <p>
+            © 2026 VG BOIS.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+const randomNumber =
+    Math.floor(
+        100000 + Math.random() * 900000
+    );
+
+document.getElementById(
+    "orderNumber"
+).textContent =
+    "VG-" + randomNumber;
+
+</script>
+
+</body>
+</html>
